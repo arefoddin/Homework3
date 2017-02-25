@@ -15,6 +15,8 @@ For this exercise, we will be analyzing a single cell RNA-Seq dataset of mouse b
 
 **1. Describe the composition of the raw dataset (i.e. number of genes, number of samples, and dropout rate). After filtering against weakly detected cells and lowly expressed genes using reasonable parameters, how do these summary statistics change?**
 
+
+
 **2. What proportion of the counts from your filtered dataset map to mitochondrial genes? Compare these values to other mitochondrial read distributions in the PBMC dataset shown in lab and in the Seurat vignette. If you determine that mitochondrial reads represent a source of unwanted variation in the filtered data, use techniques discussed in lab to remove this unwanted source of variation.**
 
 **3. Perform linear dimensionality reduction (PCA) on the filtered dataset. Provide summary plots, statistics, and tables to show A) how many PCs are statistically significant, B) which genes contribute to which principle components, and C) how much variability is explained in these top components. Compare the variability in the top PCs to other scRNA-Seq datasets.**
@@ -31,6 +33,15 @@ For this exercise, we will be analyzing a single cell RNA-Seq dataset of mouse b
 
 **7. Seurat is one of many analysis packages for scRNA-Seq. As many of these frameworks are very young, what feedback do you have to improve the user experience of single cell analyses?**
 
+
+# Part II-- ChIP-Seq and Epigenetics
+
+**
+
+```{r loadDataPart2, eval = FALSE}
+celFiles <- list.celfiles(path = "data/", full.names=TRUE)
+data.affy<-ReadAffy(filenames = celFiles)
+```
 
 ## Submission
 Please submit your solution directly on the canvas website. Please provide your code (.Rmd) and a pdf file for your final write-up. Please pay attention to the clarity and cleanness of your homework. Page numbers and figure or table numbers are highly recommended for easier reference.
